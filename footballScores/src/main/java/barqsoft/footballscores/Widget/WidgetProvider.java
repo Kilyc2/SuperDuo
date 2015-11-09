@@ -1,12 +1,15 @@
 package barqsoft.footballscores.Widget;
 
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.widget.RemoteViews;
 
+import barqsoft.footballscores.MainActivity;
 import barqsoft.footballscores.R;
 
 public class WidgetProvider extends AppWidgetProvider {
@@ -19,21 +22,16 @@ public class WidgetProvider extends AppWidgetProvider {
         }
     }
 
-    @Override
-    public void onEnabled(Context context) {
-        // Enter relevant functionality for when the first widget is created
-    }
-
-    @Override
-    public void onDisabled(Context context) {
-        // Enter relevant functionality for when the last widget is disabled
-    }
-
     public void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
-
-        RemoteViews view = initViews(context, appWidgetManager, appWidgetId);
-        appWidgetManager.updateAppWidget(appWidgetId, view);
+        RemoteViews remoteViews = initViews(context, appWidgetManager, appWidgetId);
+        appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
+        Intent launchActivity = new Intent(context, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, launchActivity, 0);
+        remoteViews.setOnClickPendingIntent(R.id.widget_text, pendingIntent);
+        ComponentName thisWidget = new ComponentName(context, WidgetProvider.class);
+        AppWidgetManager manager = AppWidgetManager.getInstance(context);
+        manager.updateAppWidget(thisWidget, remoteViews);
     }
 
     private RemoteViews initViews(Context context,
