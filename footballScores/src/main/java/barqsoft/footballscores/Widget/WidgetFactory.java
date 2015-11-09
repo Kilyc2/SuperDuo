@@ -75,7 +75,7 @@ public class WidgetFactory implements RemoteViewsService.RemoteViewsFactory {
     }
 
     private String[] getToday() {
-        Date fragmentdate = new Date(System.currentTimeMillis() - 86400000);
+        Date fragmentdate = new Date(System.currentTimeMillis());
         SimpleDateFormat mformat = new SimpleDateFormat("yyyy-MM-dd");
         String[] today = {mformat.format(fragmentdate)};
         return today;
