@@ -4,6 +4,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Binder;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
@@ -74,7 +75,7 @@ public class WidgetFactory implements RemoteViewsService.RemoteViewsFactory {
     }
 
     private String[] getToday() {
-        Date fragmentdate = new Date(System.currentTimeMillis());
+        Date fragmentdate = new Date(System.currentTimeMillis() - 86400000);
         SimpleDateFormat mformat = new SimpleDateFormat("yyyy-MM-dd");
         String[] today = {mformat.format(fragmentdate)};
         return today;
@@ -99,12 +100,16 @@ public class WidgetFactory implements RemoteViewsService.RemoteViewsFactory {
             return mView;
         } else {
             RemoteViews mView = new RemoteViews(context.getPackageName(),
-                    R.layout.scores_list_item);
+                    R.layout.widget_item);
             String[] matchValues = match.split(";");
             mView.setTextViewText(R.id.home_name, matchValues[0]);
+            mView.setTextColor(R.id.home_name, Color.BLACK);
             mView.setTextViewText(R.id.away_name, matchValues[1]);
+            mView.setTextColor(R.id.away_name, Color.BLACK);
             mView.setTextViewText(R.id.data_textview, matchValues[2]);
+            mView.setTextColor(R.id.data_textview, Color.BLACK);
             mView.setTextViewText(R.id.score_textview, matchValues[3]);
+            mView.setTextColor(R.id.score_textview, Color.BLACK);
             return mView;
         }
     }
