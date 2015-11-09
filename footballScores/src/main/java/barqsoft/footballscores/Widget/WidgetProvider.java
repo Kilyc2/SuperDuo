@@ -36,7 +36,6 @@ public class WidgetProvider extends AppWidgetProvider {
         appWidgetManager.updateAppWidget(appWidgetId, view);
     }
 
-    @SuppressWarnings("deprecation")
     private RemoteViews initViews(Context context,
                                   AppWidgetManager widgetManager, int widgetId) {
         RemoteViews mView = new RemoteViews(context.getPackageName(),

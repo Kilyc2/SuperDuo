@@ -9,9 +9,13 @@
         android:id="@+id/widget_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_launcher"
+        android:drawablePadding="-50dp"
+        android:drawableStart="@drawable/ic_launcher"
         android:gravity="center"
         android:text="@string/today_matches"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/widget_list"

@@ -2,7 +2,7 @@
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:initialKeyguardLayout="@layout/football_score_widget"
     android:initialLayout="@layout/football_score_widget"
-    android:minHeight="40dp"
+    android:minHeight="110dp"
     android:minWidth="250dp"
     android:previewImage="@drawable/appwidget_preview"
     android:resizeMode="vertical"
