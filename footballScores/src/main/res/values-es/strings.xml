@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">Acerca de</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="final_text">Final</string>
+    <string name="not_know_league">Liga desconocida Por favor informe</string>
+    <string name="quarter_final">Cuartos de Final</string>
+    <string name="semi_final">Semifinal</string>
+    <string name="share_text">Compartir</string>
+    <string name="today">Hoy</string>
+    <string name="tomorrow">Mañana</string>
+    <string name="matchday_text">Jornada</string>
+    <string name="about_text">Esta app ofrece resultados de partidos de futbol de la Premier League,Seria A,Bundesliga,Primera División
+        y la Uefa Champions League.
+        Todos los datos de las jornadas han sido obtenidos de football-data.org free API.
+        Todos los logos de los equipos han sido obtenidos de http://hdlogo.wordpress.com/ bajo petición del creador.
+        La versión original de esta app fue creada por Yahia Khalid Ibn El Walid Ahmed y una versión modificable ha sido proporcionada
+        a los estudiantes del programa Udacity Android Nanodegree.
+        Para avisar de errores o sugerencias no dudes en enviar un mail a y.k.ibnelwalid@gmail.com.
+        Durante la sesión de descanso se incluirán datos falsos a la app.</string>
+    <string name="first_knockout_round">Octavos de final</string>
+    <string name="group_stage_text">Fase de grupos</string>
+    <string name="yesterday">Ayer</string>
+    <string name="today_matches">Jornadas de hoy</string>
+    <string name="no_match_today">Hoy no hay partidos</string>
+</resources>
