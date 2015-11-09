@@ -51,7 +51,6 @@ public class ScoresProvider extends ContentProvider {
         }
         return -1;
     }
-
     @Override
     public boolean onCreate() {
         mOpenHelper = new ScoresDBHelper(getContext());

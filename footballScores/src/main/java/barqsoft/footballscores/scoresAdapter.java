@@ -82,7 +82,6 @@ public class scoresAdapter extends CursorAdapter {
         }
 
     }
-
     public Intent createShareForecastIntent(String ShareText) {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);

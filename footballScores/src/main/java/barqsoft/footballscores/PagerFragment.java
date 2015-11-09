@@ -23,7 +23,6 @@ public class PagerFragment extends Fragment {
     public ViewPager mPagerHandler;
     private myPageAdapter mPagerAdapter;
     private MainScreenFragment[] viewFragments = new MainScreenFragment[5];
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.pager_fragment, container, false);
@@ -60,7 +59,6 @@ public class PagerFragment extends Fragment {
         public CharSequence getPageTitle(int position) {
             return getDayName(getActivity(), System.currentTimeMillis() + ((position - 2) * 86400000));
         }
-
         public String getDayName(Context context, long dateInMillis) {
             // If the date is today, return the localized version of "Today" instead of the actual
             // day name.

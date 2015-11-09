@@ -35,7 +35,6 @@ public class MainScreenFragment extends Fragment implements LoaderManager.Loader
     public void setFragmentDate(String date) {
         fragmentdate[0] = date;
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              final Bundle savedInstanceState) {
